@@ -1,0 +1,14 @@
+cifar10+BC_k12 :
+    dataset: cifar10
+    class: 10
+    batch: 64
+    k: 12
+    BC: true
+    depth: 100
+    data_augument: true
+    opt: sgd
+    scheduler: step
+    max_epoch: 300
+    device: cuda
+    seed: 0
+
