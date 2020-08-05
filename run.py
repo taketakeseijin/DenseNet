@@ -109,6 +109,10 @@ class Recorder():
 
 
 def train(config):
+    seed = config["seed"]
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    
     trainTransform, testTransform = data.get_transforms(config)
     trainLoader = data.get_dataloader(
         config, train=True, transform=trainTransform)
